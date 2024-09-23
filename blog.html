@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- tailwind & daisyUI cdn -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- tailwind config -->
+    <script>
+        tailwind.config = {
+          theme: {
+            extend: {
+              colors: {
+                clifford: '#da373d',
+                primaryColor: '#B4F461',
+                mainText: '#111111',
+                pText: '#636363'
+              }
+            }
+          }
+        }
+      </script>
+    <title>Blog </title>
+</head>
+<body>
+    <!-- header start  -->
+    <header class="">
+        <!-- nav bar  -->
+         <nav class="bg-[#f9f7f3]">
+            <!-- nav div -->
+            <div class="flex justify-between items-center py-8 w-10/12 mx-auto">
+            <div>
+                <button id="home-btn" class="btn w-28 text-black font-bold text-xl bg-primaryColor"><a href="index.html">Home</a></button>
+            </div>
+            <div class="flex justify-between items-center space-x-4">
+                <img src="./assets/logo.png" alt="">
+                <h1 class="font-bold text-xl">Donate Bangladesh</h1>
+            </div>
+            <div class="flex justify-between items-center space-x-2">
+                <img src="./assets/coin.png" alt="">
+                <h1 class="font-semibold text-xl text-pText">5500</h1>
+                <h3 class="font-semibold text-xl text-pText">BDT</h3>
+            </div>
+        </div>
+        <!-- nav div -->
+         </nav>
+        <!-- nav bar  -->
+     </header>
+    <!-- header end    -->
+
+    <main class="w-9/12 mx-auto">
+        <!-- main div -->
+         <div class="py-12">
+            <div class="my-6">
+                <h1 class="text-3xl text-mainText font-bold">Important FAQ </h1>
+            </div>
+            <div class="join join-vertical w-full">
+                <div class="collapse collapse-arrow join-item border-base-300 border py-4">
+                  <input type="radio" name="my-accordion-4" checked="checked" />
+                  <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                  <div class="collapse-content">
+                    <p>The Document Object Model is a cross-platform and language-independent interface that treats an HTML or XML document as a tree structure wherein each node is an object representing a part of the document. The DOM represents a document with a logical tree.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-4">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                  <div class="collapse-content">
+                    <p class="text-black font-bold text-xl">To select an element from the DOM:</p>
+                    <ul class="list-disc px-4">
+                      <li>By ID: Use the element's unique id (e.g., #header).</li>
+                      <li>By Class: Select elements with the same class (e.g., .button).</li>
+                      <li>By Tag Name: Target all elements of a specific type (e.g., div, p).</li>
+                      <li>By CSS Selector: Use any valid CSS selector for more complex selections (e.g., div > p).</li>
+                      <li>By Attributes: Select elements based on their attributes (e.g., [data-type]).</li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-4">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and why is it useful?</div>
+                  <div class="collapse-content">
+                    <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at a higher level in the DOM than the element on which the event originated. It allows us to attach a single event listener for elements that exist now or in the future.</p>
+                  </div>
+                </div>
+                <div class="collapse collapse-arrow join-item border-base-300 border py-4">
+                  <input type="radio" name="my-accordion-4" />
+                  <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles using the DOM?</div>
+                  <div class="collapse-content">
+                    <p>Manipulating Element Attributes
+                        If you want to change other attributes like id , href , or src , you can use the setAttribute() method. The setAttribute() method accepts two arguments: The name of the attribute to set. The value of the attribute to set.</p>
+                  </div>
+                </div>
+              </div>
+         </div>
+        <!-- main div -->
+    </main>
+</body>
+</html>
