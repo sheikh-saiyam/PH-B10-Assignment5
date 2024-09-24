@@ -34,7 +34,7 @@ document.getElementById('donation-btn').addEventListener('click', function(e){
     // history section code 
     const donationSubject = document.getElementById('donation-subject').innerText;
     const historyItem = document.createElement("div");
-
+    
     historyItem.className ="bg-white rounded-lg border border-[#e8e8e8] p-6 border-2 shadow-sm ";
     
     historyItem.innerHTML= `
@@ -58,17 +58,17 @@ document.getElementById('donation-btn2').addEventListener('click', function(e){
 
     if(donateInput2 <= 0 ){
         alert('Please enter an amount greater than zero.');
-        document.getElementById('my_modal_1').close();
+        document.getElementById('my_modal_2').close();
     }
 
     else if (isNaN(donateInput2)){
         alert('Invalid Donation Amount');
-        document.getElementById('my_modal_1').close();
+        document.getElementById('my_modal_2').close();
     }
 
     else if (coinDonateAmount.innerText < donateInput2) {
         alert('donation amount is greater than the account balance');
-        document.getElementById('my_modal_1').close();
+        document.getElementById('my_modal_2').close();
     }
     
     else {
@@ -94,6 +94,57 @@ document.getElementById('donation-btn2').addEventListener('click', function(e){
 
     const historyContainer2 = document.getElementById("history-box");
     historyContainer2.insertBefore(historyItem2, historyContainer2.firstChild);
+    // history section code 
+    }
+
+})
+
+
+// for no3 donation box 
+document.getElementById('donation-btn3').addEventListener('click', function(e){
+    e.preventDefault();
+    const donateInput3 = parseFloat(document.getElementById('donate-input3').value);
+    const donateBalance3 = document.getElementById('donate-balance3');
+    const coinDonateAmount = document.getElementById('coin-donate-amount');
+
+    if(donateInput3 <= 0 ){
+        alert('Please enter an amount greater than zero.');
+        document.getElementById('my_modal_3').close();
+    }
+
+    else if (isNaN(donateInput3)){
+        alert('Invalid Donation Amount');
+        document.getElementById('my_modal_3').close();
+    }
+
+    else if (coinDonateAmount.innerText < donateInput3) {
+        alert('donation amount is greater than the account balance');
+        document.getElementById('my_modal_3').close();
+    }
+    
+    else {
+    // input section code
+    let floatDonateBalance3 = parseFloat(donateBalance3.innerText);
+    let totalDonate3 =  donateInput3 + floatDonateBalance3 ;
+    donateBalance3.innerText = totalDonate3;
+
+    let floatCoinDonateAmount = parseFloat(coinDonateAmount.innerText);
+    let afterTotalDonate = floatCoinDonateAmount -  donateInput3 ;
+    coinDonateAmount.innerText = afterTotalDonate;
+    // input section code
+
+    // history section code 
+    const donationSubject3 = document.getElementById('donation-subject3').innerText;
+    const historyItem3 = document.createElement("div");
+
+    historyItem3.className ="bg-white rounded-lg border border-[#e8e8e8] p-6 border-2 shadow-sm ";
+    
+    historyItem3.innerHTML= `
+    <p class="font-bold px-3 py-2 "> ${donateInput3} Taka is donated for ${donationSubject3}</p>
+    <p class="text-pText px-3 "> Date: ${Date().toLocaleString()}</p>`;
+
+    const historyContainer3 = document.getElementById("history-box");
+    historyContainer3.insertBefore(historyItem3, historyContainer3.firstChild);
     // history section code 
     }
 
