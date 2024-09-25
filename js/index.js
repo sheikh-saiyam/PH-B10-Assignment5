@@ -14,16 +14,13 @@ const historyPageBtn = document.getElementById('history-btn');
 historyPageBtn.addEventListener("click", function(){
 
     historyPageBtn.classList.add('bg-[#B4F461]');
-    // historyPageBtn.classList.remove('');
-
     donationPageBtn.classList.remove('bg-[#B4F461]');
+
 })
 
 donationPageBtn.addEventListener("click", function(){
 
     historyPageBtn.classList.remove('bg-[#B4F461]');
-    // historyPageBtn.classList.add('bg-slate-100 ');
-
     donationPageBtn.classList.add('bg-[#B4F461]');
     
 })

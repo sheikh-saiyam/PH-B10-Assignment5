@@ -34,7 +34,7 @@ document.getElementById('donation-btn').addEventListener('click', function(e){
     // history section code 
     const donationSubject = document.getElementById('donation-subject').innerText;
     const historyItem = document.createElement("div");
-    
+
     historyItem.className ="bg-white rounded-lg border border-[#e8e8e8] p-6 border-2 shadow-sm ";
     
     historyItem.innerHTML= `
